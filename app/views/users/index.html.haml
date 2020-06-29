@@ -13,6 +13,10 @@
         = link_to("ユーザー一覧", "/users/index")
       %li
         = link_to("新規登録", "/signup")
+  - if flash[:notice]
+    .flash
+      = flash[:notice]
+
   .main.users-index
     .container
       %h1.users-heading ユーザー一覧
