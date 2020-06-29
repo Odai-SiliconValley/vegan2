@@ -1,2 +1,14 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.haml
+%body
+  %header
+    .header-logo
+      = link_to("VEGAN", "/")
+    %ul.header-menus
+      %li
+        = link_to("VEGANとは", "/about")
+      %li
+        = link_to("投稿一覧", "/posts/index")
+  .main.posts-index
+    .container
+      - @posts.each do |post|
+        .posts-index-item
+          = post.content

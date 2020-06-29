@@ -1,10 +1,12 @@
 %body
   %header
     .header-logo
-      %a{:href => "/"} VEGAN
+      = link_to("VEGAN", "/")
     %ul.header-menus
       %li
-        %a{:href => "/about"} VEGANとは
+        = link_to("VEGANとは", "/about")
+      %li
+        = link_to("投稿一覧", "/posts/index")
   .main.top-main
     .top-message
       %h2 脱牛肉
