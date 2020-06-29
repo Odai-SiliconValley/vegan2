@@ -7,7 +7,8 @@
         = link_to("VEGANとは", "/about")
       %li
         = link_to("投稿一覧", "/posts/index")
-  .about-main
-    %h2 VEGANとは
-    %p
-      veganの、veganによる、veganのためのサイト。
+  .main.posts-index
+    .container
+      - @posts.each do |post|
+        .posts-index-item
+          = post.content
