@@ -1,0 +1,19 @@
+%body
+  %header
+    .header-logo
+      = link_to("VEGAN", "/")
+    %ul.header-menus
+      %li
+        = link_to("VEGANとは", "/about")
+      %li
+        = link_to("投稿一覧", "/posts/index")
+      %li
+        = link_to("新規投稿", "/posts/new")
+  .main.posts-new
+    .container
+      %h1.form-heading 編集
+      = form_tag("/posts/#{@post.id}/update") do
+        .form
+          .form-body
+            %textarea{:name => "content"}= @post.content
+            %input{:type => "submit", :value => "保存"}
