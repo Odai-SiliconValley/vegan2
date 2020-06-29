@@ -9,6 +9,8 @@
         = link_to("投稿一覧", "/posts/index")
       %li
         = link_to("新規投稿", "/posts/new")
+      %li
+        = link_to("ユーザー一覧", "/users/index")
   .main.posts-index
     .container
       - @posts.each do |post|

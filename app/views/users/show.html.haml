@@ -11,13 +11,8 @@
         = link_to("新規投稿", "/posts/new")
       %li
         = link_to("ユーザー一覧", "/users/index")
-  .main.posts-show
+  .main.user-show
     .container
-      .posts-show-item
-        %p 
-          = @post.content
-        .post-time
-          = @post.created_at
-        .post-menus
-          = link_to("編集", "/posts/#{@post.id}/edit")
-          = link_to("削除", "/posts/#{@post.id}/destroy", {method:"post"})
+      .user
+        %h2= @user.name
+        %p= @user.email
