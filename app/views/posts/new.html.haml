@@ -9,10 +9,11 @@
         = link_to("投稿一覧", "/posts/index")
       %li
         = link_to("新規投稿", "/posts/new")
-  .main.posts-show
+  .main.posts-new
     .container
-      .posts-show-item
-        %p 
-          = @post.content
-        .post-time
-          = @post.created_at
+      %h1.form-heading 投稿
+      = form_tag("/posts/create") do
+        .form
+          .form-body
+            %textarea{:name => "content"}
+            %input{:type => "submit", :value => "投稿"}
