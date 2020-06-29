@@ -11,6 +11,8 @@
         = link_to("新規投稿", "/posts/new")
       %li
         = link_to("ユーザー一覧", "/users/index")
+      %li
+        = link_to("新規登録", "/signup")
   .main.posts-index
     .container
       - @posts.each do |post|
