@@ -1,0 +1,35 @@
+%body
+  %header
+    .header-logo
+      = link_to("VEGAN", "/")
+    %ul.header-menus
+      %li
+        = link_to("VEGANとは", "/about")
+      %li
+        = link_to("投稿一覧", "/posts/index")
+      %li
+        = link_to("新規投稿", "/posts/new")
+      %li
+        = link_to("ユーザー一覧", "/users/index")
+      %li
+        = link_to("新規登録", "/signup")
+  - if flash[:notice]
+    .flash
+      = flash[:notice]
+
+  .main.users-new
+    .container
+      .form-heading 新規ユーザー登録
+      .form.users-form
+        .form-body
+          - @user.errors.full_messages.each do |message|
+            .form-error
+              = message
+          = form_tag("/users/create") do
+            %p ユーザー名
+            %input{:name => "name", :value => "#{@user.name}"}/
+            %P メールアドレス
+            %input{:name => "email", :value => "#{@user.email}"}/
+            %p パスワード
+            %input{:name => "password", :value => "#{@user.password}"}/
+            %input{:type => "submit", :value => "新規登録"}/

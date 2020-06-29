@@ -17,11 +17,10 @@
     .flash
       = flash[:notice]
 
-  .main.posts-new
+  .main.users-index
     .container
-      %h1.form-heading 投稿
-      = form_tag("/posts/create") do
-        .form
-          .form-body
-            %textarea{:name => "content"}
-            %input{:type => "submit", :value => "投稿"}
+      %h1.users-heading ユーザー一覧
+      - @users.each do |user|
+        .users-index-item
+          .user-right
+            = link_to(user.name, "/users/#{user.id}")

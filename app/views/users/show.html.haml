@@ -17,11 +17,9 @@
     .flash
       = flash[:notice]
 
-  .main.posts-new
+  .main.user-show
     .container
-      %h1.form-heading 投稿
-      = form_tag("/posts/create") do
-        .form
-          .form-body
-            %textarea{:name => "content"}
-            %input{:type => "submit", :value => "投稿"}
+      .user
+        %h2= @user.name
+        %p= @user.email
+        = link_to("編集", "/users/#{@user.id}/edit")
