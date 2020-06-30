@@ -1,7 +1,10 @@
 %body
   %header
     .header-logo
-      = link_to("VEGAN", "/")
+      - if @current_user
+        = link_to("VEGAN", "/posts/index")
+      - else 
+        = link_to("VEGAN", "/")
     %ul.header-menus
       - if @current_user
         %li
