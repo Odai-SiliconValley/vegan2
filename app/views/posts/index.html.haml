@@ -33,4 +33,9 @@
     .container
       - @posts.each do |post|
         .posts-index-item
-          = link_to(post.content, "/posts/#{post.id}")
+          .post-left
+            %img{:src => "/user_images/#{post.user.image_name}"}/
+          .post-right
+            .post-user-name
+              = link_to(post.user.name, "/users/#{post.user.id}")
+            = link_to(post.content, "/posts/#{post.id}")
