@@ -8,7 +8,7 @@
     %ul.header-menus
       - if @current_user
         %li
-          = link_to(@current_user.name, "/user/#{@current_user.id}")
+          = link_to(@current_user.name, "/users/#{@current_user.id}")
         %li
           = link_to("投稿一覧", "/posts/index")
         %li
