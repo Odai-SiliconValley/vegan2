@@ -39,3 +39,4 @@
             .post-user-name
               = link_to(post.user.name, "/users/#{post.user.id}")
             = link_to(post.content, "/posts/#{post.id}")
+      = paginate(@posts)
