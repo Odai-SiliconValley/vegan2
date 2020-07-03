@@ -52,3 +52,6 @@ production:
   database: vegan2_production
   username: vegan2
   password: <%= ENV['VEGAN2_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
