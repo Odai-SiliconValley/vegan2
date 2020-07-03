@@ -2,7 +2,8 @@
 
 # 概要
 お気に入りのveganショップを投稿し、他のユーザーと共有できるアプリです。投稿に対して、いいねすることができます。
-0a3fc03306283ed808e9fefdf4a6d1c4.jpg
+[![Image from Gyazo](https://i.gyazo.com/0a3fc03306283ed808e9fefdf4a6d1c4.jpg)](https://gyazo.com/0a3fc03306283ed808e9fefdf4a6d1c4)
+[![Image from Gyazo](https://i.gyazo.com/09d3ba6e5853976a9656ab83e650aa24.jpg)](https://gyazo.com/09d3ba6e5853976a9656ab83e650aa24)
 # バージョン
 - macOS Catalina 10.15.5
 - Rails 5.2.4.3
